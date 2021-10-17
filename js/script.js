@@ -56,7 +56,7 @@ function pwd_validation(pwd, min, max){
 }
 
 function email_validation(email){
-    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    var mailformat = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-0-9A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/;
     if(email.value.match(mailformat)){
         return true;
     }
