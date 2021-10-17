@@ -79,21 +79,32 @@ function phone_validation(phone){
     }
 }
 
+function password_repeat_validation(pwd, pwd_repeat) {
+    if(pwd.value==pwd_repeat.value){
+        return true;
+    }
+    alert('Passwords are not equal!');
+    pwd_repeat.focus();
+    return false;
+}
+
 function formValidation(){
     if($('.registration').hasClass('open')){
         var login = document.registration.login;
         var pwd = document.registration.password;
+        var pwd_repeat=document.registration.password_repeat;
         var email = document.registration.email;
         var phone = document.registration.phone;
         if(login_validation(login)){
             if(email_validation(email)){
                 if(phone_validation(phone)){
                     if(pwd_validation(pwd)){
-                        console.log('ok');
+                        if(password_repeat_validation(pwd, pwd_repeat)){
+                            console.log('ok');
+                        }
                     }
                 }
             }
-            document.registration.onSubmit = "return false;";
         }
     }
     else{
@@ -102,8 +113,7 @@ function formValidation(){
         if(login_validation(login)){
             if(pwd_validation(pwd)){
                 console.log('ok');
-            }            
-            document.enter.onSubmit = "return false;";
+            }
         }
     }
 }
