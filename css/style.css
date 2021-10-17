@@ -170,32 +170,17 @@ body, html{
 }
 
 .dark_background{
-    flex-shrink: 0;
-    flex-grow: 0;
     margin: auto;
     background-color: rgba(36, 36, 36, 0.6);
     top: 0;
     left: 0;
     position: fixed;
     width: 100%;
-    height: initial;
+    height: 100%;
     position: absolute;
     /* opacity: 0; */
     visibility: hidden;
     /* cursor: zoom-out; */
-}
-
-.modal_win{
-    position: relative;
-    /* display: none; */
-    flex-shrink: 0;
-    flex-grow: 0;
-    visibility: hidden;
-    margin: 30vh 20vw;
-    border-radius: 50px;
-    background: #00000070;
-    box-shadow:  20px 20px 60px #000000b6,
-                 -20px -20px 60px #1a1a1a70;
 }
 
 .open{
@@ -204,8 +189,23 @@ body, html{
     position: fixed;
 }
 
-.modal_win_open{
+.modal_win{
+    position: absolute;
+    /* display: none; */
+    left: 0;
+    top: 0;
+    width: 50%;
+    visibility: hidden;
+    margin: 30vh 20vw;
+    border-radius: 50px;
+    background: #00000070;
+    box-shadow:  20px 20px 60px #000000b6,
+                 -20px -20px 60px #1a1a1a70;
+}
+
+.modal_win.open{
     visibility: visible;
+    overflow: hidden;
 }
 
 .modal_win_close_btn{

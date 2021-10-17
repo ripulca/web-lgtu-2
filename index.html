@@ -17,7 +17,7 @@
                 <a class="header_nav_title" href="http://"><h1>PH</h1></a>
                 <form class="header_nav_search neomorf_flat">
                     <button class="header_nav_search_btn">
-                            <svg width="32" height="32" viewBox="0 0">
+                            <svg width="32" height="32">
                                 <path d="M22 20c1.2-1.6 2-3.7 2-6 0-5.5-4.5-10-10-10S4 8.5 4 14s4.5 10 10 10c2.3 0 4.3-.7 6-2l6.1 6 1.9-2-6-6zm-8 1.3c-4 0-7.3-3.3-7.3-7.3S10 6.7 14 6.7s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3z"></path>
                             </svg>
                     </button>
@@ -65,12 +65,12 @@
                         <path d="M25.33 8.55l-1.88-1.88-7.45 7.45-7.45-7.45-1.88 1.88 7.45 7.45-7.45 7.45 1.88 1.88 7.45-7.45 7.45 7.45 1.88-1.88-7.45-7.45z"></path>
                     </svg>
                 </button>
-                <form method="post" class="modal_win_content">
-                    <input class="modal_win_input" type="text" placeholder="Enter login">
-                    <input class="modal_win_input" type="text" placeholder="Enter email">
-                    <input class="modal_win_input" type="text" placeholder="Enter phone">
-                    <input class="modal_win_input" type="text" placeholder="Enter password">
-                    <input class="modal_win_input" type="text" placeholder="Repeat password">
+                <form name='registration' onSubmit="return formValidation();" class="modal_win_content">
+                    <input name="login" class="modal_win_input" type="text" placeholder="Enter login">
+                    <input name="email" class="modal_win_input" type="text" placeholder="Enter email">
+                    <input name="phone" class="modal_win_input" type="text" placeholder="Enter phone">
+                    <input name="password" class="modal_win_input" type="text" placeholder="Enter password">
+                    <input name="password_repeat" class="modal_win_input" type="text" placeholder="Repeat password">
                     <button class="modal_win_submit_btn">Submit</button>
                 </form>
             </div>
@@ -80,9 +80,9 @@
                         <path d="M25.33 8.55l-1.88-1.88-7.45 7.45-7.45-7.45-1.88 1.88 7.45 7.45-7.45 7.45 1.88 1.88 7.45-7.45 7.45 7.45 1.88-1.88-7.45-7.45z"></path>
                     </svg>
                 </button>
-                <form method="post" class="modal_win_content">
-                    <input class="modal_win_input" type="text" placeholder="Enter login">
-                    <input class="modal_win_input" type="text" placeholder="Enter password">
+                <form  name='enter' onSubmit="return formValidation();" class="modal_win_content">
+                    <input name="login" class="modal_win_input" type="text" placeholder="Enter login">
+                    <input name="password" class="modal_win_input" type="text" placeholder="Enter password">
                     <button class="modal_win_submit_btn">Submit</button>
                 </form>
             </div>
