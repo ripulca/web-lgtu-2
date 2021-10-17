@@ -14,7 +14,7 @@
     <div class="app">
         <header class="header">
             <nav class="header_nav">
-                <a class="header_nav_title" href="http://"><h1>PhotoHost</h1></a>
+                <a class="header_nav_title" href="http://"><h1>PH</h1></a>
                 <form class="header_nav_search neomorf_flat">
                     <button class="header_nav_search_btn">
                             <svg width="32" height="32" viewBox="0 0">
@@ -34,8 +34,8 @@
                     </div>
                 </div>
                 <div class="header_nav_auth">
-                    <button class="header_nav_auth_btn neomorf_flat">Sign in</button>
-                    <button class="header_nav_auth_btn neomorf_flat">Sign up</button>
+                    <button class="header_nav_auth_btn neomorf_flat sign_in" >Sign in</button>
+                    <button class="header_nav_auth_btn neomorf_flat sign_up">Sign up</button>
                 </div>
             </nav>
         </header>
@@ -45,19 +45,50 @@
                     <div class="main_info_container neomorf_flat"></div>
                 </div>
                 <div class="main_info_text">
-                    <h1>Find your ideal photo</h1>
-                    <h4>We provide free high quality photos from all over the world</h4>
+                    <div>Find your ideal photo</div>
+                    <div>We provide free high quality photos from all over the world</div>
                 </div>
             </div>
-            <div>
+            <!-- <div>
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </div> -->
         </main>
         <footer>
             
         </footer>
+        <div class="dark_background">
+            <div class="registration modal_win">
+                <button class="modal_win_close_btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30">
+                        <path d="M25.33 8.55l-1.88-1.88-7.45 7.45-7.45-7.45-1.88 1.88 7.45 7.45-7.45 7.45 1.88 1.88 7.45-7.45 7.45 7.45 1.88-1.88-7.45-7.45z"></path>
+                    </svg>
+                </button>
+                <form method="post" class="modal_win_content">
+                    <input class="modal_win_input" type="text" placeholder="Enter login">
+                    <input class="modal_win_input" type="text" placeholder="Enter email">
+                    <input class="modal_win_input" type="text" placeholder="Enter phone">
+                    <input class="modal_win_input" type="text" placeholder="Enter password">
+                    <input class="modal_win_input" type="text" placeholder="Repeat password">
+                    <button class="modal_win_submit_btn">Submit</button>
+                </form>
+            </div>
+            <div class="enter modal_win">
+                <button class="modal_win_close_btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30">
+                        <path d="M25.33 8.55l-1.88-1.88-7.45 7.45-7.45-7.45-1.88 1.88 7.45 7.45-7.45 7.45 1.88 1.88 7.45-7.45 7.45 7.45 1.88-1.88-7.45-7.45z"></path>
+                    </svg>
+                </button>
+                <form method="post" class="modal_win_content">
+                    <input class="modal_win_input" type="text" placeholder="Enter login">
+                    <input class="modal_win_input" type="text" placeholder="Enter password">
+                    <button class="modal_win_submit_btn">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
