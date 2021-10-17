@@ -80,17 +80,30 @@ function phone_validation(phone){
 }
 
 function formValidation(){
-    var login = document.registration.login;
-    var pwd = document.registration.passid;
-    var email = document.registration.email;
-    var phone = document.registration.phone;
-    if(login_validation(login)){
-        if(email_validation(email)){
-            if(phone_validation(phone)){
-                if(pwd_validation(pwd)){
-                    console.log('ok');
+    if($('.registration').hasClass('open')){
+        var login = document.registration.login;
+        var pwd = document.registration.password;
+        var email = document.registration.email;
+        var phone = document.registration.phone;
+        if(login_validation(login)){
+            if(email_validation(email)){
+                if(phone_validation(phone)){
+                    if(pwd_validation(pwd)){
+                        console.log('ok');
+                    }
                 }
             }
+            document.registration.onSubmit = "return false;";
+        }
+    }
+    else{
+        var login = document.enter.login;
+        var pwd = document.enter.password;
+        if(login_validation(login)){
+            if(pwd_validation(pwd)){
+                console.log('ok');
+            }            
+            document.enter.onSubmit = "return false;";
         }
     }
 }
