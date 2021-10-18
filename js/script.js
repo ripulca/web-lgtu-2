@@ -49,17 +49,18 @@ $('.dark_background').mouseup(function (e) {
   });
 
 function pwd_validation(pwd){
-    num_amount=0;
+    NaN_amount=0;
     var pwd_len = pwd.value.length;
     for(var i=0; i<pwd_len; i++){
         if(isNaN(pwd.value[i])){
-            num_amount++;
+            Nan_amount++;
         }
     }
+    num_amount=pwd_len-NaN_amount;
     if(pwd_len>num_amount){
         return true;
     }
-    alert('Login must have ');
+    alert('Password can not be without letters');
     pwd.focus();
     return false;
 }
@@ -106,7 +107,7 @@ function formValidation(){
         // var phone = document.registration.phone;
         if(pwd_validation(pwd)){
             if(password_repeat_validation(pwd, pwd_repeat)){
-                console.log('ok');                    
+                console.log('ok');
             }
         }
     }
