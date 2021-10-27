@@ -118,4 +118,7 @@ function formValidation(){
             console.log('ok');
         }
     }
+    // if($('.permission').attr("checked")!='checked'){
+    //     alert('you must give me permission!');
+    // }
 }
