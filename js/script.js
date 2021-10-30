@@ -49,19 +49,19 @@ $('.dark_background').mouseup(function (e) {
   });
 
 function pwd_validation(pwd){
-    NaN_amount=0;
-    var pwd_len = pwd.value.length;
+    let amount_Nan=0;
+    const pwd_len = pwd.length;
     for(var i=0; i<pwd_len; i++){
-        if(isNaN(pwd.value[i])){
-            Nan_amount++;
+        if(isNaN(pwd[i])){
+            amount_Nan++;
         }
     }
-    num_amount=pwd_len-NaN_amount;
+    num_amount=pwd_len-amount_Nan;
     if(pwd_len>num_amount){
         return true;
     }
     alert('Password can not be without letters');
-    pwd.focus();
+    // pwd.focus();
     return false;
 }
 
@@ -100,25 +100,25 @@ function password_repeat_validation(pwd, pwd_repeat) {
 
 function formValidation(){
     if($('.registration').hasClass('open')){
-        // var login = document.registration.login;
-        var pwd = document.registration.password;
-        var pwd_repeat=document.registration.password_repeat;
-        // var email = document.registration.email;
-        // var phone = document.registration.phone;
+        var login = document.registration.login.value;
+        var pwd = document.registration.password.value;
+        // var pwd_repeat=document.registration.password_repeat;
+        var email = document.registration.email.value;
+        var phone = document.registration.phone.value;
+        console.log(login+' '+pwd+' '+email+' '+phone);
         if(pwd_validation(pwd)){
             if(password_repeat_validation(pwd, pwd_repeat)){
-                console.log('ok');
+                console.log(login+' '+pwd+' '+email+' '+phone);
             }
         }
     }
-    else{
-        // var login = document.enter.login;
-        var pwd = document.enter.password;
+    if($('.enter').hasClass('open')){
+        var login = document.enter.login.value;
+        var pwd = document.enter.password.value;
+        console.log(login+' '+pwd);
         if(pwd_validation(pwd)){
-            console.log('ok');
+            console.log(login+' '+pwd);
         }
     }
-    // if($('.permission').attr("checked")!='checked'){
-    //     alert('you must give me permission!');
-    // }
+    return false;
 }
