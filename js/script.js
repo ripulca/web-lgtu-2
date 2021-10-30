@@ -90,11 +90,11 @@ function pwd_validation(pwd){
 // }
 
 function password_repeat_validation(pwd, pwd_repeat) {
-    if(pwd.value==pwd_repeat.value){
+    if(pwd==pwd_repeat){
         return true;
     }
     alert('Passwords are not equal!');
-    pwd_repeat.focus();
+    // pwd_repeat.focus();
     return false;
 }
 
