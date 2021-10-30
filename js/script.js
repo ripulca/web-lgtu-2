@@ -105,7 +105,7 @@ function formValidation(){
         // var pwd_repeat=document.registration.password_repeat;
         var email = document.registration.email.value;
         var phone = document.registration.phone.value;
-        console.log(login+' '+pwd+' '+email+' '+phone);
+        // console.log(login+' '+pwd+' '+email+' '+phone);
         if(pwd_validation(pwd)){
             if(password_repeat_validation(pwd, pwd_repeat)){
                 console.log(login+' '+pwd+' '+email+' '+phone);
@@ -115,7 +115,7 @@ function formValidation(){
     if($('.enter').hasClass('open')){
         var login = document.enter.login.value;
         var pwd = document.enter.password.value;
-        console.log(login+' '+pwd);
+        // console.log(login+' '+pwd);
         if(pwd_validation(pwd)){
             console.log(login+' '+pwd);
         }
